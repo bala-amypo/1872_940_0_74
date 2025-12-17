@@ -3,8 +3,10 @@ package com.example.demo.entity;
 import jakarta.persistance.*;
 
 @Entity
-@Table(name = "students")
+// @Table(name = "students")
 public class Student {
+        @Id 
+        @GeneratedValue(strategy = GeneratedType.IDENTITY)
         private Long id;
         private String name;
         private String email;
