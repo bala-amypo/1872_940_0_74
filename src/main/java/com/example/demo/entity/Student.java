@@ -5,8 +5,8 @@ import jakarta.persistance.*;
 @Entity
 // @Table(name = "students")
 public class Student {
-        @Id 
-        @GeneratedValue(strategy = GeneratedType.IDENTITY)
+        // @Id 
+        // @GeneratedValue(strategy = GeneratedType.IDENTITY)
         private Long id;
         private String name;
         private String email;
