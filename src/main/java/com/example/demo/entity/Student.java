@@ -1,16 +1,18 @@
 package com.example.demo.entity;
 
-import java.time.LocalDate;
+import jakarta.persistance.*;
 
+@Entity
+@Table(name = "students")
 public class Student {
-        private int id;
+        private Long id;
         private String name;
         private String email;
 
-        public int getId() {
+        public Long getId() {
             return id;
         }
-        public void setId(int id) {
+        public void setId(Long id) {
             this.id = id;
         }
 
@@ -30,9 +32,9 @@ public class Student {
             this.email = email;
         }
 
-        public Student(int id, String name, String email) {
+        public Student(Long id, String name, String email) {
             this.id = id;
             this.name = name;
             this.email = email;
         }
-}                                                                 // }
+}
