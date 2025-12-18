@@ -12,13 +12,13 @@ import org.springframework.validation.FieldError;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ResourceNotFoundException.class) //runtime exception
-    public ResponseEntity<String> handleNotFound(ResourceNotFoundException ex){
+    @ExceptionHandler(ResourceNotFoundException.class) 
+    public ResponseEntity<String> handleNotFound(ResourceNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, String>> handleMethod(MethodArgumentNotValidException mex){
+    public ResponseEntity<Map<String, String>> handleMethod(MethodArgumentNotValidException mex) {
         
         Map<String, String> error = new HashMap<>();
 
