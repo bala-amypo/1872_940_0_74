@@ -20,6 +20,7 @@
             return new  ResponseEntity<>(studentService.saveStudent(student),HttpStatus.CREATED);
         }
         
+        @GetMapping("/getdata/{id}")
         
 
     }
