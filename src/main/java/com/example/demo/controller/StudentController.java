@@ -5,13 +5,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
+import org.springframework.http.ResponseEntity;
+import jakarta.validation.Valid;
 
 @RestController
 public class StudentController{
     @Autowired
     StudentService StudentService;
     @PostMapping("/postdata")
-    public Student postdata(@RequestBody Student student){
+    public ResponseEntity<Student> postdata(@Valid @RequestBody Student student){
         return StudentService.saveStudent(student);
     }
 }
