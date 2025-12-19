@@ -30,6 +30,7 @@
         }
 
         @PutMapping("/updatedata")
-        public Student updatedStudent(@PathVariable Long id, )
-
+        public Student updatedStudent(@PathVariable Long id, (@RequestBody Student student  )){
+            return studentService.updatedata(id,student);
+        }
     }
