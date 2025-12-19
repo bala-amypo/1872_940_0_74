@@ -9,7 +9,9 @@ import java.time.LocalDate;
 import jakarta.persistence.Column;
 
 @Entity
-@
+// @getter()
+// @setter()   
+@Data()
 @Table(name = "student")
 public class Student {
 
