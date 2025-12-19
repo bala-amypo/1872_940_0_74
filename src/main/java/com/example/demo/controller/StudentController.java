@@ -29,8 +29,8 @@
             return studentService.getStudentById(id);
         }
 
-        @PutMapping("/updatedata")
-        public Student updatedStudent(@PathVariable Long id, (@Valid @RequestBody Student student)){
+        @PutMapping("/updatedata/{id}")
+        public Student updatedStudent(@PathVariable Long id, @Valid @RequestBody Student student){
             return studentService.updatedata(id,student);
         }
     }
