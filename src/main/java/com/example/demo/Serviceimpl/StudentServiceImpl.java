@@ -28,6 +28,7 @@ public class StudentServiceImpl implements StudentService{
     }
 
     public Student updatedata(Long id, Student student){
-        return 
+        Student exists = getStudentById(id);
+        exist.setName()
     }
 }
