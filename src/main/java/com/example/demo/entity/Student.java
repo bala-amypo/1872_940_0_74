@@ -21,7 +21,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Size(min=3,max=20,message"The username must be within 3 to 20 characters")
+    @Size(min=3,max=20,message="The username must be within 3 to 20 characters")
     @NotEmpty(message = "Name cannot be empty")
     private String name;
     @Column(unique=true);
@@ -29,38 +29,38 @@ public class Student {
     @Email(message = "Email should be valid")
     private String email;
 
-    // Constructors
-    public Student() {
-    }
+    // // Constructors
+    // public Student() {
+    // }
 
-    public Student(Long id, String name, String email) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-    }
+    // public Student(Long id, String name, String email) {
+    //     this.id = id;
+    //     this.name = name;
+    //     this.email = email;
+    // }
 
-    // Getters & Setters
-    public Long getId() {
-        return id;
-    }
+    // // Getters & Setters
+    // public Long getId() {
+    //     return id;
+    // }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    // public void setId(Long id) {
+    //     this.id = id;
+    // }
 
-    public String getName() {
-        return name;
-    }
+    // public String getName() {
+    //     return name;
+    // }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    // public void setName(String name) {
+    //     this.name = name;
+    // }
 
-    public String getEmail() {
-        return email;
-    }
+    // public String getEmail() {
+    //     return email;
+    // }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // public void setEmail(String email) {
+    //     this.email = email;
+    // }
 }
