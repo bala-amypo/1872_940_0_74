@@ -35,8 +35,8 @@ public class StudentServiceImpl implements StudentService{
         // .orElseThrow(()-> new ResourceNotFoundException("Student not found"));  
     }
 
-    // public void deletedata(Long id){
-        // Student student = getStudentById(id);
-        // studentRepository.delete(student);
-    // }
+    public void deletedata(Long id){
+        Student student = getStudentById(id);
+        studentRepository.delete(student);
+    }
 }

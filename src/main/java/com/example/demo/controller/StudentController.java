@@ -34,9 +34,9 @@
             return studentService.updatedata(id,student);
         }
 
-        // @DeleteMapping("/deletedata/{id}")
-        // public ResponseEntity<Student> deletedata(@PathVariable Long id){
-        //     studentService.deletedata(id);
-        //     return ResponseEntity.ok("Student data deleted successfully");
-        // }
+        @DeleteMapping("/deletedata/{id}")
+        public ResponseEntity<Student> deletedata(@PathVariable Long id){
+            studentService.deletedata(id);
+            return ResponseEntity.ok(body:"Student data deleted successfully");
+        }
     }
