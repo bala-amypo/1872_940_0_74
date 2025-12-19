@@ -34,4 +34,8 @@ public class StudentServiceImpl implements StudentService{
         return studentRepository.save(exist);
         // .orElseThrow(()-> new ResourceNotFoundException("Student not found"));  
     }
+
+    // public  Student deletedata(Long id){
+        
+    // }
 }

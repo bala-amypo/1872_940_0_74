@@ -35,8 +35,8 @@
         }
 
         // @DeleteMapping("/deletedata/{id}")
-        // public Student deletedata(@PathVariable Long id){
+        // public ResponseEntity<Student> deletedata(@PathVariable Long id){
         //     studentService.deletedata(id);
-        //     return 
+        //     return ResponseEntity.ok("Student data deleted successfully");
         // }
     }
