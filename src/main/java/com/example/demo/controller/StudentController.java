@@ -6,6 +6,7 @@
     import org.springframework.web.bind.annotation.GetMapping;
     import org.springframework.web.bind.annotation.RestController;
     import org.springframework.web.bind.annotation.PutMapping;
+    import org.springframework.web.bind.annotation.DeleteMapping;
     import org.springframework.http.ResponseEntity;
     import com.example.demo.entity.Student;
     import com.example.demo.service.StudentService;
@@ -37,6 +38,6 @@
         @DeleteMapping("/deletedata/{id}")
         public ResponseEntity<Student> deletedata(@PathVariable Long id){
             studentService.deletedata(id);
-            return ResponseEntity.ok(body:"Student data deleted successfully");
+            return ResponseEntity.ok("Student data deleted successfully");
         }
     }
