@@ -33,4 +33,10 @@
         public Student updatedStudent(@PathVariable Long id, @Valid @RequestBody Student student){
             return studentService.updatedata(id,student);
         }
+
+        // @DeleteMapping("/deletedata/{id}")
+        // public Student deletedata(@PathVariable Long id){
+        //     studentService.deletedata(id);
+        //     return 
+        // }
     }

@@ -28,10 +28,10 @@ public class StudentServiceImpl implements StudentService{
     }
 
     public Student updatedata(Long id, Student student){
-        Student exists = getStudentById(id);
+        Student exist = getStudentById(id);
         exist.setName(student.getName());
         exist.setEmail(student.getEmail());
-        return studentRepository.save(exist)
-        .orElseThrow(()-> new ResourceNotFoundException("Student not found"));  
+        return studentRepository.save(exist);
+        // .orElseThrow(()-> new ResourceNotFoundException("Student not found"));  
     }
 }
