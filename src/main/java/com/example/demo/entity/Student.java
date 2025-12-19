@@ -4,19 +4,22 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
+import jakarta.persistence.Column;
 
 @Entity
+@
 @Table(name = "student")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Size(min=3,max=20,message"The username must be within 3 to 20 characters")
     @NotEmpty(message = "Name cannot be empty")
     private String name;
-
+    @Column(unique=true);
     @NotEmpty(message = "Email cannot be empty")
     @Email(message = "Email should be valid")
     private String email;
