@@ -29,6 +29,8 @@ public class StudentServiceImpl implements StudentService{
 
     public Student updatedata(Long id, Student student){
         Student exists = getStudentById(id);
-        exist.setName()
+        exist.setName(student.getName());
+        exist.setEmail(student.getEmail());
+        return studentRepository.save(exist);
     }
 }
