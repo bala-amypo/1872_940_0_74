@@ -31,6 +31,7 @@ public class StudentServiceImpl implements StudentService{
         Student exists = getStudentById(id);
         exist.setName(student.getName());
         exist.setEmail(student.getEmail());
-        return studentRepository.save(exist);
+        return studentRepository.save(exist)
+        .orElseThrow(()-> new ResourceNotFoundException("Student not found"));
     }
 }
