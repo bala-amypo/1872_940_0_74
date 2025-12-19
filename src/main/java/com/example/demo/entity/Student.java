@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.*;    
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -12,6 +13,8 @@ import jakarta.persistence.Column;
 // @getter()
 // @setter()   
 @Data()
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "student")
 public class Student {
 
